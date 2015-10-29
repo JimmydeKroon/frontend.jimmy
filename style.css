@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+body a {
+    color: #000000;
+}
+
+body a:hover {
+    opacity: 0.5;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+body > picture {
+    max-height: 10em;
+    max-width: 100%;
+}
+
+/*header CSS*/
+body > header {
+    background-color: #FFCC00;
+    box-shadow: 2px 1px 4px 1px;
+}
+
+body > header h1 {
+    text-align: center;
+    padding: 1em;
+}
+
+body > header p {
+    text-align: center;
+}
+
+body > header img {
+    display: block;
+    width: 90%;
+    margin: 1em;
+}
+
+body > header nav ul li {
+    background-color: rgba(255,165,0,0.6);
+    text-align: center;
+    margin-top: .2em;
+    transition: background-color .5s ease;
+    list-style: none;
+}
+
+body > header nav ul li a {
+    color: #FFFFFF;
+    line-height: 2em;
+    text-decoration: none;
+}
+
+body > header nav ul li:hover {
+    cursor: pointer;
+    background-color: rgba(255,140,0,0.9);
+    opacity: 1;
+}
+
+body > header form {
+    display: block;
+    width: 50%;
+    float: left;
+    height: 3em;
+    line-height: 2.5em;
+    padding: 0 .5em;
+}
+
+body > header form input {
+    width: 70%;
+    border-radius: 2em 4em;
+}
+
+body > header form button {
+    width: 30%;
+    border-radius: 4em 2em;
+    transition: transform 2s;
+}
+
+body > header form label {
+    font-size: 0;
+}
+
+p.to-profile {
+    display: block;
+    float: right;
+    width: 50%;
+    height: 3em;
+    line-height: 3em;
+}
+
+p.to-profile a {
+    color: black;
+}
+
+p.to-profile a:hover {
+    opacity: 0.5;
+}
+
+/*main CSS*/
+body > main {
+    background-color: white;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+body > main h1 {
+    margin: 1em;
+}
+
+body > main h3 {
+    margin: 1em;
+}
+
+body > main h2 {
+    margin: 1em;
+}
+
+body > main ol{
+    text-decoration: none;
+}
+
+body > main ol li a{
+    text-decoration: none;
+    color: black;
+
+}
+
+body > main ol li a:hover {
+    opacity: 0.5;
+}
+
+/*section CSS*/
+body > section {
+    background-color: #C0C0C0;
+    box-shadow: 2px 1px 3px 2px;
+}
+
+body > section article {
+    margin: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border-bottom: 1px solid grey;
+}
+
+/*aside CSS*/
+body > aside {
+    background-color: #FF9900;
+    padding: 1em;
+    margin: 0.1em;
+}
+
+body > aside article {
+    margin-top: 1.5em;
+}
+
+body > aside section {
+    margin-bottom: 2em;
+}
+
+/*footer*/
+body > footer {
+    background-color: #222;
+    padding: 1em
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    color: #F5F5F5;
+}
+
+body > footer a {
+    color: #F5F5F5;
+}
+
+
+body > footer > * {
+    flex-basis: 20em;
+    flex-grow: 1;
+    margin: 1em;
+}
+
+body > footer #sitemap {
+    flex-basis: 100%;
+}
+
+body > footer #sitemap > ul {
+    display: flex;
+}
+
+body > footer #sitemap > ul > * {
+    flex-basis: 20em;
+}
+
+body > footer > p:last-of-type {
+    flex-basis: 100%;
+    margin: 1em;
+    text-align: center;
+}
+
+/*responsive*/
+@media screen and (min-width: 45em){
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    body > header {
+        flex-basis: 100%;
+    }
+
+    body > header nav ul {
+        display: flex;
+    }
+
+    body > header nav ul li {
+        flex-grow: 1;
+    }
+
+    body > header form button:hover {
+    transform: rotate(360deg);
+}
+
+    body > header img {
+        width: 20em;
+        position: absolute;
+        opacity: .25;
+        top: 0;
+        left: 1em;
+        transition: width 1s, opacity 1s;
+        transform: rotate(-8deg);
+
+    }
+
+    body > header img:hover {
+        width: 30em;
+        opacity: 0.8;
+    }
+
+    body > header nav {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    body > main {
+        border-radius: 20px;
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+
+    body > main * {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    body > main img {
+        width: 100%
+    }
+
+    body > section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        order: 1;
+    }
+
+    body > section > article {
+        margin-bottom: 1.5em;
+    }
+
+    body > section > h2 {
+        display: none;
+    }
+
+    body > aside {
+        flex-basis: 13em;
+        box-shadow: -2px 0 2px 0 rgba(0,0,0,0.8);
+    }
+
+    body > footer {
+        order: 2;
+    }
+}
+
+@media screen and (min-width: 65em){
+
+    body > main img {
+        width: 40em;
+    }
+
+    body > aside {
+        max-height: 95em;
+        overflow: scroll;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
