@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.6em;
 }
 
 body {
@@ -43,7 +44,6 @@ body > picture {
 /*header CSS*/
 body > header {
     background-color: #FFCC00;
-    box-shadow: 2px 1px 4px 1px;
 }
 
 body > header h1 {
@@ -122,23 +122,21 @@ p.to-profile a:hover {
 }
 
 /*main CSS*/
+body > main * {
+    max-width: 50em;
+}
+
 body > main {
     background-color: white;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 1em;
 }
 
-body > main h1 {
-    margin: 1em;
+body > main article {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
 }
 
-body > main h3 {
-    margin: 1em;
-}
-
-body > main h2 {
-    margin: 1em;
+body > main img{
+    max-width: 100%;
 }
 
 body > main ol{
@@ -156,13 +154,17 @@ body > main ol li a:hover {
 }
 
 /*section CSS*/
+section > h2 {
+    display: none;
+}
+
 body > section {
     background-color: #C0C0C0;
-    box-shadow: 2px 1px 3px 2px;
 }
 
 body > section article {
-    margin: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
     border-bottom: 1px solid grey;
@@ -171,11 +173,11 @@ body > section article {
 /*aside CSS*/
 body > aside {
     background-color: #FF9900;
-    padding: 1em;
-    margin: 0.1em;
 }
 
 body > aside article {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
     margin-top: 1.5em;
 }
 
@@ -186,7 +188,7 @@ body > aside section {
 /*footer*/
 body > footer {
     background-color: #222;
-    padding: 1em
+    padding: 1em;
     color: #FFFFFF;
     display: flex;
     flex-wrap: wrap;
@@ -199,7 +201,7 @@ body > footer a {
 
 
 body > footer > * {
-    flex-basis: 20em;
+    flex-basis: 15em;
     flex-grow: 1;
     margin: 1em;
 }
@@ -209,7 +211,7 @@ body > footer #sitemap {
 }
 
 body > footer #sitemap > ul {
-    display: flex;
+    display: block;
 }
 
 body > footer #sitemap > ul > * {
@@ -222,7 +224,7 @@ body > footer > p:last-of-type {
     text-align: center;
 }
 
-/*responsive*/
+/*responsive:     table-layout: ;*/
 @media screen and (min-width: 45em){
     body {
         display: flex;
@@ -287,10 +289,14 @@ body > footer > p:last-of-type {
         display: flex;
         flex-wrap: wrap;
         order: 1;
+        box-shadow: 1px -1px 3px;
     }
 
     body > section > article {
+        margin: 0.7em;
         margin-bottom: 1.5em;
+        max-width: 40%;
+        margin-left: 3em;
     }
 
     body > section > h2 {
@@ -299,23 +305,57 @@ body > footer > p:last-of-type {
 
     body > aside {
         flex-basis: 13em;
-        box-shadow: -2px 0 2px 0 rgba(0,0,0,0.8);
+        box-shadow: -1px -1px 3px;
+        margin-left: 0.2em;
+    }
+
+    body > aside section {
+        margin-left: -0.8em;
+
     }
 
     body > footer {
         order: 2;
     }
+
+    body > footer #sitemap > ul {
+    display: flex;
+}
 }
 
+/*responsive        desktop-layout;*/
 @media screen and (min-width: 65em){
 
-    body > main img {
-        width: 40em;
+    body > main {
+        order: 2
     }
 
     body > aside {
-        max-height: 95em;
-        overflow: scroll;
+        max-height: 150em;
+        overflow: hidden;
+        order: 2;
+        max-width: 19%;
+    }
+
+    body > section {
+        flex-wrap: wrap;
+        max-width: 19%;
+        max-height: 150em;
+        overflow: hidden;
+        margin-right: 0.2em;
+    }
+
+    body > section article {
+        margin-left: 0.5em;
+        max-width: 100%;
+    }
+
+    body > footer {
+     order: 3
+    }
+
+    body > main img {
+        max-width: 35em;
     }
 }
 
